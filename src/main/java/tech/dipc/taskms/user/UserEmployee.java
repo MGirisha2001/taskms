@@ -17,7 +17,6 @@ public class UserEmployee {
 
 	@Id
 
-	int cid;
 	String firstname;
 	String middlename;
 	String lastname;
@@ -26,7 +25,7 @@ public class UserEmployee {
 	String role;
 
 	@OneToMany(cascade = CascadeType.ALL)
-	@JoinColumn(name = "UserEmployee_cid", referencedColumnName = "cid")
+	@JoinColumn(name = "UserEmployee_Name", referencedColumnName = "firstname")
 	List<TaskEmployee> taskEmployee = new ArrayList<>();
 
 	public List<TaskEmployee> getTaskEmployee() {
@@ -35,14 +34,6 @@ public class UserEmployee {
 
 	public void setTaskEmployee(List<TaskEmployee> taskEmployee) {
 		this.taskEmployee = taskEmployee;
-	}
-
-	public int getCid() {
-		return cid;
-	}
-
-	public void setCid(int cid) {
-		this.cid = cid;
 	}
 
 	public String getFirstname() {
@@ -95,8 +86,8 @@ public class UserEmployee {
 
 	@Override
 	public String toString() {
-		return "Employee [cid=" + cid + ", firstname=" + firstname + ", middlename=" + middlename + ", lastname="
-				+ lastname + ", email=" + email + ", phonenum=" + phonenum + ", role=" + role + "]";
+		return "Employee [firstname=" + firstname + ", middlename=" + middlename + ", lastname=" + lastname + ", email="
+				+ email + ", phonenum=" + phonenum + ", role=" + role + "]";
 	}
 
 }

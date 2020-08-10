@@ -32,7 +32,7 @@ public class DemoCommandLineRunner implements CommandLineRunner {
 
 		UserEmployee emp1 = new UserEmployee();
 
-		emp1.setCid(1);
+		// emp1.setCid(1);
 		emp1.setFirstname("Ronnie");
 		emp1.setMiddlename("D.");
 		emp1.setLastname("Anderson");
@@ -42,7 +42,7 @@ public class DemoCommandLineRunner implements CommandLineRunner {
 
 		UserEmployee emp2 = new UserEmployee();
 
-		emp2.setCid(2);
+		// emp2.setCid(2);
 		emp2.setFirstname("John");
 		emp2.setMiddlename("Andrew");
 		emp2.setLastname("Brown");
@@ -52,7 +52,7 @@ public class DemoCommandLineRunner implements CommandLineRunner {
 
 		UserEmployee emp3 = new UserEmployee();
 
-		emp3.setCid(3);
+		// emp3.setCid(3);
 		emp3.setFirstname("Ann");
 		emp3.setMiddlename("Claire");
 		emp3.setLastname("Brook");
@@ -62,7 +62,7 @@ public class DemoCommandLineRunner implements CommandLineRunner {
 
 		UserEmployee emp4 = new UserEmployee();
 
-		emp4.setCid(4);
+		// emp4.setCid(4);
 		emp4.setFirstname("Frank");
 		emp4.setMiddlename("Finn");
 		emp4.setLastname("Hill");
@@ -72,7 +72,7 @@ public class DemoCommandLineRunner implements CommandLineRunner {
 
 		UserEmployee emp5 = new UserEmployee();
 
-		emp5.setCid(5);
+		// emp5.setCid(5);
 		emp5.setFirstname("Betty");
 		emp5.setMiddlename("Grace");
 		emp5.setLastname("Johnson");
