@@ -137,11 +137,11 @@ public class DemoCommandLineRunner implements CommandLineRunner {
 		e5.setEstimatedTimeTaken(3);
 		e5.setActualTimeTaken(4);
 
-		emp1.getTaskEmployee().add(e1);
-		emp2.getTaskEmployee().add(e2);
-		emp3.getTaskEmployee().add(e3);
-		emp4.getTaskEmployee().add(e4);
-		emp5.getTaskEmployee().add(e5);
+		emp1.getTaskEmployee().add(e2);
+		emp2.getTaskEmployee().add(e3);
+		emp3.getTaskEmployee().add(e4);
+		emp4.getTaskEmployee().add(e5);
+		emp5.getTaskEmployee().add(e1);
 
 		this.repo.save(emp1);
 		this.repo.save(emp2);
