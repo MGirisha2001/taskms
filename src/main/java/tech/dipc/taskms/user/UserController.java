@@ -1,6 +1,5 @@
 package tech.dipc.taskms.user;
 
-
 import java.util.List;
 import java.util.Optional;
 
@@ -16,61 +15,49 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import org.springframework.web.bind.annotation.RestController;
+
 @CrossOrigin
 @RestController
 public class UserController {
-	
+
 	@Autowired
 	UserRepo repo;
-	
-	
-	 @RequestMapping("/employee")
-	 
-	 public List<UserEmployee> getEmployees()
-	 {
-		 return repo.findAll();
-	 }
-	 
+
+	@RequestMapping("/employee")
+
+	public List<UserEmployee> getEmployees() {
+		return repo.findAll();
+	}
+
 	@RequestMapping("/employee/{cid}")
-	 
-	 
-	 public Optional<UserEmployee> getEmployees2(@PathVariable("cid") int cid) {
-		 
-		 return repo.findById(cid);
-}
-	 
-	
-	 
-	 @PostMapping("/postemployee")
-	 public UserEmployee getEmployee3(@RequestBody UserEmployee employee)
-	 {
-		
-	 	repo.save(employee);
-	 	 return employee;
-	 	
-	 	 
-	 }
 
-	 @DeleteMapping("/employee/{cid}")
-	 public UserEmployee getCustomers4(@PathVariable("cid") int cid)
-	 {
-	 	UserEmployee cust=repo.getOne(cid);
-	 	repo.delete(cust);
-	 	return cust;
-	 }
-	 
-	 
-	
+	public Optional<UserEmployee> getEmployees2(@PathVariable("cid") int cid) {
 
+		return repo.findById(cid);
+	}
 
-	 @PutMapping(path="/putemployee" , consumes= {"application/json"} )
+	@PostMapping("/postemployee")
+	public UserEmployee getEmployee3(@RequestBody UserEmployee employee) {
 
-	 public UserEmployee getCustomers5(@RequestBody UserEmployee employee)
-	 {
-	 	
-	 	repo.save(employee);
-	 	return employee;
-	 	
-	 }
+		repo.save(employee);
+		return employee;
+
+	}
+
+	@DeleteMapping("/employee/{cid}")
+	public UserEmployee getCustomers4(@PathVariable("cid") int cid) {
+		UserEmployee cust = repo.getOne(cid);
+		repo.delete(cust);
+		return cust;
+	}
+
+	@PutMapping(path = "/putemployee", consumes = { "application/json" })
+
+	public UserEmployee getCustomers5(@RequestBody UserEmployee employee) {
+
+		repo.save(employee);
+		return employee;
+
+	}
 
 }
